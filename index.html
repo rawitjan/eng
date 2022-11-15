@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <title>Vocabulary</title>
+</head>
+<body>
+
+    <div class="container-xxl">
+        <div class="card">
+            <div class="card-header text-center">
+                <div class="row">
+                    <div class="col text-center">
+                        <div class="h4 text-danger" id="erreur"></div>
+                        <h2 id="error" class="text-danger text-center"></h2>
+                    </div>
+                    <div class="col-auto my-auto">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Сөздіктер</button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="?num=1">Тема 5. Текст 1</a></li>
+                                <li><a class="dropdown-item" href="?num=2">Тема 5. Текст 2(1)</a></li>
+                                <li><a class="dropdown-item" href="?num=3">Тема 5. Текст 2(2)</a></li>
+                                <li><a class="dropdown-item" href="?num=4">Тема 5. Текст 3(1)</a></li>
+                                <li><a class="dropdown-item" href="?num=5">Тема 5. Текст 3(2)</a></li>
+                                <li><a class="dropdown-item" href="?num=6">Тема 5. Текст 3(3)</a></li>
+				<li><a class="dropdown-item" href="?num=7">Тема 6. Текст 1</a></li>
+				<li><a class="dropdown-item" href="?num=8">Тема 6. Текст 2</a></li>
+				<li><a class="dropdown-item" href="?num=9">Тема 6. Текст 3</a></li>
+                <li><a class="dropdown-item" href="?num=10">Тема 8</a></li>
+                <li><a class="dropdown-item" href="?num=11">Тема 10</a></li>
+                <li><a class="dropdown-item" href="?num=12">Тема 11</a></li>
+                <li><a class="dropdown-item" href="?num=13">Тема 12</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><text class="dropdown-item">ИНФОРМАТИКА 201 💻</text></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="card-body text-canter">
+                <div class="d-grid gap-2 col-6 mx-auto d-none" id="nav">
+                    <a href="?num=1" class="btn btn-primary">Тема 5. Текст 1</a>
+                    <a href="?num=2" class="btn btn-primary">Тема 5. Текст 2(1)</a>
+                    <a href="?num=3" class="btn btn-primary">Тема 5. Текст 2(2)</a>
+                    <a href="?num=4" class="btn btn-primary">Тема 5. Текст 3(1)</a>
+                    <a href="?num=5" class="btn btn-primary">Тема 5. Текст 3(2)</a>
+                    <a href="?num=6" class="btn btn-primary">Тема 5. Текст 3(3)</a>
+                    <a href="?num=7" class="btn btn-primary">Тема 6. Текст 1</a>
+                    <a href="?num=8" class="btn btn-primary">Тема 6. Текст 2</a>
+                    <a href="?num=9" class="btn btn-primary">Тема 6. Текст 3</a>
+                    <a href="?num=10" class="btn btn-primary">Тема 8</a>
+                    <a href="?num=11" class="btn btn-primary">Тема 10</a>
+                    <a href="?num=12" class="btn btn-primary">Тема 11</a>
+                    <a href="?num=13" class="btn btn-primary">Тема 12</a>
+                    <text class="text-center">ИНФОРМАТИКА 201 💻</text>
+                </div>
+                <canvas class="overflow" id="puzzle" width="1200" height="1500"></canvas>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery-ui.min.js"></script>
+    <script src="assets/js/easeljs-0.6.1.min.js"></script>
+    <script src="assets/jsjquery.ui.touch-punch.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/db/vocabulary.js"></script>
+    <script src="assets/js/script-tp-1.js"></script>
+
+    <script>
+        if (getAllUrlParams().num == undefined) {
+            var errorH3 = document.getElementById('error')
+            errorH3.innerText = 'Сөздік таңдалмады -->'
+
+            document.getElementById('nav').classList.remove('d-none')
+        }
+    </script>
+</body>
+</html>

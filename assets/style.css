@@ -1,0 +1,15 @@
+@import url(assets/fonts/MontserratAlternates-SemiBold.ttf);
+
+body {
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+#erreur {
+  color: red;
+}
+
+#puzzle{
+  width: 100%;
+}
+
+/*body{ background-color: red;}*/
